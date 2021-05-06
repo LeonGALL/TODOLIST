@@ -76,4 +76,18 @@ $(document).ready(function () {
         $(this).remove();
       });
   });
+
+  $("form").on("submit", function () {
+    var a = $("#inputval").val();
+    if (a !== "") {
+      let div = $('<div><button type="button" class="delete">X</button></div>');
+      div.prepend($("<li></li>").text(a));
+      div.slideUp(1);
+      $("#todolist").append(div);
+      div.slideDown(function () {
+        $("#inputval").val("");
+      });
+    }
+    return false;
+  });
 });
