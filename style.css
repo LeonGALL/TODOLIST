@@ -24,11 +24,12 @@ ul li {
   color: wheat;
   padding: 15px;
   background-color: steelblue;
+  min-height: 20px;
 }
 
 .done {
   background-color: slategrey;
-  text-decoration: line-through 2px black;
+  text-decoration: line-through 1px black;
 }
 
 form {
@@ -90,7 +91,18 @@ ul div {
   width: 40px;
   height: 40px;
   align-self: center;
+  text-align: center;
   border-radius: 100px;
+}
+
+#special {
+  text-align: right;
+}
+#special::before {
+  content: "";
+}
+#special::after {
+  content: " --->";
 }
 
 @media screen and (max-width: 800px) {
@@ -106,5 +118,40 @@ ul div {
   .delete {
     position: absolute;
     overflow: hidden;
+  }
+  #special {
+    text-align: center;
+  }
+  #special::before {
+    content: "<--- ";
+  }
+  #special::after {
+    content: "";
+  }
+
+  .delete {
+    background-color: rgba(128, 128, 128, 0.9);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  ul li {
+    font-size: 1em;
+    padding: 25px;
+  }
+  .delete {
+    background-color: rgba(65, 64, 64, 0.5);
+    color: rgba(245, 222, 179, 0.5);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  div button {
+    width: 110px;
+  }
+  .delete {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
   }
 }
