@@ -1,0 +1,110 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(245, 222, 179, 0.5);
+}
+
+ul {
+  margin: 30px 10px 0px 10px;
+  width: 80%;
+  list-style: none;
+}
+
+ul li {
+  border: 1px solid wheat;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: wheat;
+  padding: 15px;
+  background-color: steelblue;
+}
+
+.done {
+  background-color: slategrey;
+  text-decoration: line-through 2px black;
+}
+
+form {
+  margin: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+button {
+  padding: 7px;
+  background-color: tomato;
+  border-radius: 15px;
+  border: 0px;
+  cursor: pointer;
+  color: wheat;
+  font-size: 14px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form button {
+  width: 80px;
+}
+
+div button {
+  width: 150px;
+  font-size: 15px;
+}
+
+#save {
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: orangered;
+}
+
+button:active {
+  background-color: red;
+}
+
+form input {
+  width: 15%;
+  padding: 7px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-right: 10px;
+}
+
+ul div {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.delete {
+  margin: 0px 10px;
+  background-color: gray;
+  width: 40px;
+  height: 40px;
+  align-self: center;
+  border-radius: 100px;
+}
+
+@media screen and (max-width: 800px) {
+  ul {
+    width: 100%;
+  }
+  form input {
+    width: auto;
+  }
+  ul div {
+    position: relative;
+  }
+  .delete {
+    position: absolute;
+    overflow: hidden;
+  }
+}

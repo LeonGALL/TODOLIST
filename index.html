@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Léon GALL" />
+    <meta name="description" content="TODO LIST" />
+    <meta name="keywords" content="todolist" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>TO DO LIST</title>
+  </head>
+  <body>
+    <form onsubmit="return false">
+      <input type="text" placeholder="Nouvel item..." id="inputval" />
+      <button type="button">Ajouter</button>
+    </form>
+    <div>
+      <button type="button" id="save">Sauvegarder</button
+      ><button type="button" id="restore">Restaurer la liste</button>
+    </div>
+
+    <ul id="todolist">
+      <div>
+        <li>Bonjour, bienvenue dans cette To Do List.</li>
+        <button type="button" class="delete">X</button>
+      </div>
+      <div>
+        <li class="done">Cliquez sur les éléments pour indiquer que vous les avez réalisé.</li>
+        <button type="button" class="delete">X</button>
+      </div>
+      <div>
+        <li style="text-align: end;">Pour les supprimer, cliquez sur la X ---></li>
+        <button type="button" class="delete">X</button>
+      </div>
+      <div>
+        <li>Vous pouvez sauvegarder une liste, puis la restaurer, et ajouter des éléments.</li>
+        <button type="button" class="delete">X</button>
+      </div>
+      <div>
+        <li>Travaillez bien !</li>
+        <button type="button" class="delete">X</button>
+      </div>
+      <div>
+        <li style="color: steelblue;">Bisous</li>
+        <button type="button" class="delete">X</button>
+      </div>
+      <div>
+        <li>Léon</li>
+        <button type="button" class="delete">X</button>
+      </div>
+    </ul>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="script.js"></script>
+</html>
